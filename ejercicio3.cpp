@@ -2,9 +2,17 @@
 using namespace std;
 
 int main() {
+    int limite;
+    cout << "Ingrese el limite para contar numeros pares: ";
+    cin >> limite;
+
+    if (limite < 0) {
+        cout << "Error: no se permiten numeros negativos" << endl;
+        return 1;
+    }
+
     int contador = 0;
-    cout << "Contando del 1 al 20, solo numeros pares:" << endl;
-    for (int i = 1; i <= 20; i++) {
+    for (int i = 1; i <= limite; i++) {
         if (i % 2 == 0) {
             cout << i << " ";
             contador++;
